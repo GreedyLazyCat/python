@@ -21,7 +21,11 @@ while True:
 
     print('Текущее кол-во камней:', n)
     print('Ваш ход')
-    n -= int(input())
+    move = int(input())
+    while not (1 <= move <= 3):
+        print("Введите кол-во камней от 1 до 3")
+        move = int(input())
+    n -= move
     if n <= 1:
         print('Вы победили')
         break
